@@ -24,7 +24,6 @@ export default function Home() {
             <TextInput
               type="text"
               label={"City"}
-              handleTextChange={(e) => {}}
               placeholder={"City Name"}
             />
 
@@ -33,7 +32,6 @@ export default function Home() {
             <Dropdown
               items={["Operational", "Running", "Stopped"]}
               name={"Stopped"}
-              handleSelected={() => {}}
             />
             <br />
 

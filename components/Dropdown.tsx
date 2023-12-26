@@ -1,3 +1,4 @@
+"use client"
 import { Subtitle } from "./Typography";
 
 interface DropdownProps {
