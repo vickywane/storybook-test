@@ -1,45 +1,19 @@
 import Banner from "@/components/Banner";
-import Button from "@/components/Button";
 import Container from "@/components/Container";
-import { Heading2, Heading3 } from "@/components/Headings";
-import { Subtitle, Text } from "@/components/Typography";
+import { Heading3 } from "@/components/Headings";
+import { Text } from "@/components/Typography";
 import Card from "@/components/Card";
-import TextInput from "@/components/TextInput";
 import Image from "next/image";
-import Dropdown from "@/components/Dropdown";
+import ProjectDetailsForm from "@/components/ProjectDetailsForm";
 
 export default function Home() {
   return (
     <main>
       <Banner />
 
-      <Container background="#F9FAFC" padding="60px 0">
-        <div className="grid grid-cols-2">
-          <div>
-            <Subtitle> Name </Subtitle>
-            <Heading2> Project Title </Heading2>
-            <br />
-            <br />
-
-            <TextInput
-              type="text"
-              label={"City"}
-              placeholder={"City Name"}
-            />
-
-            <br />
-
-            <Dropdown
-              items={["Operational", "Running", "Stopped"]}
-              name={"Stopped"}
-            />
-            <br />
-
-            <Button title={"Submit"} />
-
-            <br />
-            <br />
-          </div>
+      <Container background="#F9FAFC" padding="80px 0">
+        <div className="grid grid-cols-2 gap-24">
+          <ProjectDetailsForm />
 
           <Card>
             <div className="flex flex-col gap-4">
@@ -49,9 +23,9 @@ export default function Home() {
                 src={"/sprites.png"}
                 alt="sprite"
               />
-              <Text className="text-center"> Get Started </Text>
 
-              <Heading3 className="text-center"> Sign Up Progress </Heading3>
+              <Text className="text-center"> Setup Project </Text>
+              <Heading3 className="text-center"> Project Setup Progress </Heading3>
             </div>
           </Card>
         </div>

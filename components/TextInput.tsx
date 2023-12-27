@@ -21,15 +21,15 @@ export default function TextInput({
       {label && <label> {label} </label>}
 
       <input
-        className="h-[56px] border-2 border-[#DDE2E5] w-[350px] px-4 rounded-lg"
+        className="h-[56px] border-2 border-[#DDE2E5] w-full px-4 rounded-lg"
         {...{
           placeholder,
           type,
           value,
           onChange: (e) => {
-            setValue(e.target.value);
+            handleTextChange(e.target.value);
 
-            handleTextChange(value);
+            setValue(e.target.value);
           },
         }}
       />

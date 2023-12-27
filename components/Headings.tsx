@@ -1,7 +1,7 @@
 type Props = {
   tagName?: string;
   className?: string;
-  children: string | JSX.Element | Array<JSX.Element>;
+  children?: string | JSX.Element | Array<JSX.Element>;
 };
 
 export function Heading1({ tagName = "h1", className = "", children }: Props) {
