@@ -18,9 +18,10 @@ export default function TextInput({
 
   return (
     <div className="flex flex-col gap-4">
-      {label && <label> {label} </label>}
+      {label && <label data-testid="label-element">{label}</label>}
 
       <input
+        data-testid="input-element"
         className="h-[56px] border-2 border-[#DDE2E5] w-full px-4 rounded-lg"
         {...{
           placeholder,

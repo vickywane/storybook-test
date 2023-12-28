@@ -12,7 +12,11 @@ const ProjectDetailsForm = () => {
   return (
     <form onSubmit={(e) => {}}>
       <Subtitle> Name </Subtitle>
-      <Heading2> {name.length >= 2 ? name : "Project Title"} </Heading2>
+      <Heading2 data-testid="form-title">
+        <span data-testid="form-title">
+          {name.length >= 2 ? name : "Project Title"}
+        </span>
+      </Heading2>
       <br />
       <br />
 
