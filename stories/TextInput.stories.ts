@@ -1,4 +1,4 @@
-import { userEvent, within, expect } from "@storybook/test";
+import { userEvent, within, expect, fn } from "@storybook/test";
 import TextInput from "../components/TextInput";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -9,12 +9,11 @@ const meta: Meta<typeof TextInput> = {
 
 export default meta;
 type Story = StoryObj<typeof TextInput>;
-
 const MOCK_LABEL = 'Project Label'
 
 export const Default: Story = {
   tags: ["autodocs"],
-  play: async ({ canvasElement }) => {
+  play: async ({args, canvasElement }) => {
     const canvas = within(canvasElement);
 
     const labelElement = canvas.getByTestId("label-element")
@@ -24,11 +23,12 @@ export const Default: Story = {
     })
 
     await expect(labelElement.innerHTML).toBe(MOCK_LABEL)
+    await expect(args.handleTextChange).toHaveBeenCalled();
   },
   args: {
     label: MOCK_LABEL,
     placeholder: "Enter project label name",
     type: "text",
-    handleTextChange: () => {},
+    handleTextChange: fn(),
   },
 };

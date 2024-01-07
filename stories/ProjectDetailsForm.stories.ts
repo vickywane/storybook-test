@@ -1,7 +1,6 @@
 import { userEvent, within, expect } from "@storybook/test";
 import { Meta, StoryObj } from "@storybook/react";
 import ProjectDetailsForm from "../components/ProjectDetailsForm";
-import { setPriority } from "os";
 
 const meta: Meta<typeof ProjectDetailsForm> = {
   title: "ProjectDetailsForm",
